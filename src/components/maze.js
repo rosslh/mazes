@@ -193,7 +193,12 @@ class Maze extends Component {
         this.getMovementScore(option.x, option.y, depth - 1)
       );
 
-      let lowestScore = this.distance(x, y, this.state.marker.x, this.state.marker.y);
+      let lowestScore = this.distance(
+        x,
+        y,
+        this.state.marker.x,
+        this.state.marker.y
+      );
       let lowestDistance = lowestScore;
 
       options.forEach(option => {
@@ -246,7 +251,12 @@ class Maze extends Component {
       this.getMovementScore(option.x, option.y, 6)
     );
 
-    let lowestScore = this.distance(x, y, this.state.marker.x, this.state.marker.y);
+    let lowestScore = this.distance(
+      x,
+      y,
+      this.state.marker.x,
+      this.state.marker.y
+    );
     let nextStepX = x;
     let nextStepY = y;
 
@@ -300,7 +310,7 @@ class Maze extends Component {
       >
         <Stage
           onClick={e => this.setMarker(e)}
-          onFocus={() => { }}
+          onFocus={() => {}}
           width={this.state.tileSize * this.props.maze.cells[0].length}
           height={2000}
         >
